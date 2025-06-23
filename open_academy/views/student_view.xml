@@ -1,0 +1,41 @@
+<odoo>
+    <record id="student_prop_list_view" model="ir.ui.view">
+        <field name="name">students list view</field>
+        <field name="model">student</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="stage"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="student_prop_form_view" model="ir.ui.view">
+        <field name="name">students form view</field>
+        <field name="model">student</field>
+        <field name="arch" type="xml">
+            <form>
+               <sheet>
+                   <group>
+                        <field name="name"/>
+                   </group>
+                    <group>
+                        <group>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                             <field name="stage"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="student_prop_action" model="ir.actions.act_window">
+        <field name="name">students properties</field>
+        <field name="res_model">student</field>
+    </record>
+    <menuitem  id = "student_prop_menu" name="Students Props" parent="student_menu" action="student_prop_action"/>
+</odoo>
