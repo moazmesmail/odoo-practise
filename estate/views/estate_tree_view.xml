@@ -1,0 +1,62 @@
+<odoo>
+
+    <record id="estate_list_view" model="ir.ui.view" >
+        <field name="name">
+            estate view
+        </field>
+        <field name="model">estate</field>
+        <field name="arch" type="xml">
+            <list>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="postcode"/>
+                    <field name="facades"/>
+                    <field name="garden_orientation"/>
+            </list>
+        </field>
+
+    </record>
+    <record id="estate_form_view" model="ir.ui.view" >
+        <field name="name">estate view</field>
+        <field name="model">estate</field>
+        <field name="arch" type="xml">
+            <form>
+                    <sheet>
+                        <group string="General">
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="postcode"/>
+
+                        </group>
+
+                        <group string="Specs">
+
+                            <group>
+                                <field name="living_area"/>
+                                <field name="bedrooms"/>
+                                <field name="date_availability"/>
+                                <field name="facades"/>
+                                <field name="garage"/>
+                            </group>
+                            <group>
+                                 <field name="garden"/>
+                                <field name="garden_area"/>
+                                <field name="garden_orientation"/>
+                            </group>
+                        </group>
+
+                       <group string="Pricing">
+                            <field name="expected_price"/>
+                            <field name="selling_price"/>
+                        </group>
+                    </sheet>
+            </form>
+        </field>
+
+    </record>
+    <record id="estate_action" model="ir.actions.act_window" >
+        <field name="name">estate action</field>
+        <field name="res_model">estate</field>
+    </record>
+    <menuitem id="property_estate_menu" name="Property Estate menu" parent="sec_estate_menu" action="estate_action"/>
+</odoo>
