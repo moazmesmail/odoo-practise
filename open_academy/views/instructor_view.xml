@@ -1,0 +1,17 @@
+<odoo>
+     <record id="instructor_list_view" model="ir.ui.view" >
+        <field name="name">instructor list view</field>
+        <field name="model">instructor</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="spicalization"/>
+            </list>
+        </field>
+    </record>
+    <record id="instructor_action" model="ir.actions.act_window" >
+        <field name="name">Instructor</field>
+        <field name="res_model">instructor</field>
+    </record>
+</odoo>

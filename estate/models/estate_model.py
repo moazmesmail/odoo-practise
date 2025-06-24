@@ -1,6 +1,6 @@
 from odoo import models,fields
 
-class estate(models.Model):
+class Estate(models.Model):
     _name = "estate"
 
     name=fields.Char()

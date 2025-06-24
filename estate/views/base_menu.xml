@@ -1,4 +1,4 @@
 <odoo>
-    <menuitem id="estate_menu" name="Estate menu"/>
-    <menuitem id="sec_estate_menu" name="Second Estate menu" parent="estate_menu"/>
+    <menuitem id="estate_menu" name="Estate"/>
+    <menuitem id="sec_estate_menu" name="Estate" parent="estate_menu"/>
 </odoo>

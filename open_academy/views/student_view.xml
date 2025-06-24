@@ -18,7 +18,7 @@
             <form>
                <sheet>
                    <group>
-                        <field name="name"/>
+                        <field name="name" />
                    </group>
                     <group>
                         <group>
@@ -33,9 +33,8 @@
         </field>
     </record>
 
-    <record id="student_prop_action" model="ir.actions.act_window">
-        <field name="name">students properties</field>
+    <record id="student_action" model="ir.actions.act_window">
+        <field name="name">Students</field>
         <field name="res_model">student</field>
     </record>
-    <menuitem  id = "student_prop_menu" name="Students Props" parent="student_menu" action="student_prop_action"/>
 </odoo>

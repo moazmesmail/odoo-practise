@@ -55,8 +55,8 @@
 
     </record>
     <record id="estate_action" model="ir.actions.act_window" >
-        <field name="name">estate action</field>
+        <field name="name">Estate </field>
         <field name="res_model">estate</field>
     </record>
-    <menuitem id="property_estate_menu" name="Property Estate menu" parent="sec_estate_menu" action="estate_action"/>
+    <menuitem id="property_estate_menu" name="Properties" parent="sec_estate_menu" action="estate_action"/>
 </odoo>

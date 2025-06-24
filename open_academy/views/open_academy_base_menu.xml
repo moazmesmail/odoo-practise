@@ -1,4 +1,0 @@
-<odoo>
-    <menuitem id="open_academy_base_menu" name="Open Academy"/>
-    <menuitem id="student_menu" name="Student" parent="open_academy_base_menu"/>
-</odoo>
