@@ -1,40 +1,40 @@
 <odoo>
     <record id="student_prop_list_view" model="ir.ui.view">
         <field name="name">students list view</field>
-        <field name="model">student</field>
+        <field name="model">openacademy.student</field>
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
+                <field name="email"/>
+                <field name="birth_date"/>
                 <field name="age"/>
-                <field name="stage"/>
+                <field name="phone"/>
+                <field name="level"/>
             </list>
         </field>
     </record>
 
     <record id="student_prop_form_view" model="ir.ui.view">
         <field name="name">students form view</field>
-        <field name="model">student</field>
+        <field name="model">openacademy.student</field>
         <field name="arch" type="xml">
             <form>
                <sheet>
-                   <group>
-                        <field name="name" />
+
+                   <group string="Students info">
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="birth_date"/>
+                        <field name="age"/>
+                        <field name="phone"/>
+                        <field name="level"/>
                    </group>
-                    <group>
-                        <group>
-                            <field name="age"/>
-                        </group>
-                        <group>
-                             <field name="stage"/>
-                        </group>
-                    </group>
                 </sheet>
             </form>
         </field>
     </record>
-
     <record id="student_action" model="ir.actions.act_window">
         <field name="name">Students</field>
-        <field name="res_model">student</field>
+        <field name="res_model">openacademy.student</field>
     </record>
 </odoo>

@@ -1,11 +1,15 @@
 from odoo import models,fields
 
 class Student(models.Model):
-    _name="student"
+    _name="openacademy.student"
 
     name=fields.Char(required=True , default="Omar")
-    age=fields.Integer(default="6")
-    stage=fields.Selection([
+    birth_date=fields.Date()
+    email=fields.Char(default="email@company.com")
+    phone=fields.Char()
+    age=fields.Integer()
+
+    level=fields.Selection([
         ('primary','Primary'),
         ('secondary','Secondary'),
         ('high_school','High school'),
