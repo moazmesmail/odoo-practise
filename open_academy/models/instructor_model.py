@@ -1,9 +1,13 @@
 from odoo import fields,models
 
 class Instructor(models.Model):
-    _name = 'instructor'
+    _name = 'openacademy.instructor'
     name = fields.Char(required=True, default="Moaz")
-    age = fields.Integer(default="30")
+    bio=fields.Text()
+    age = fields.Integer()
+    birth_date = fields.Date()
+    email = fields.Char(default="email@company.com")
+    phone = fields.Char()
     spicalization = fields.Selection([
         ('programming', 'Programming'),
         ('maths', 'Maths'),

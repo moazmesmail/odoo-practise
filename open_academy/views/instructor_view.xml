@@ -1,10 +1,34 @@
 <odoo>
+    <record id="instructor_form_view" model="ir.ui.view" >
+        <field name="name">instructor form view</field>
+        <field name="model">openacademy.instructor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                   <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="bio"/>
+                        <field name="birth_date"/>
+                        <field name="age"/>
+                        <field name="spicalization"/>
+                   </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
      <record id="instructor_list_view" model="ir.ui.view" >
         <field name="name">instructor list view</field>
-        <field name="model">instructor</field>
+        <field name="model">openacademy.instructor</field>
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="name"/>
+                <field name="bio"/>
+                <field name="birth_date"/>
                 <field name="age"/>
                 <field name="spicalization"/>
             </list>
@@ -12,6 +36,6 @@
     </record>
     <record id="instructor_action" model="ir.actions.act_window" >
         <field name="name">Instructor</field>
-        <field name="res_model">instructor</field>
+        <field name="res_model">openacademy.instructor</field>
     </record>
 </odoo>
