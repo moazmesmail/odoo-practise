@@ -28,6 +28,7 @@
         'views/course_view.xml',
         'views/student_view.xml',
         'views/instructor_view.xml',
+        'views/exam_view.xml',
         'views/open_academy_main_menu.xml',
 
     ],

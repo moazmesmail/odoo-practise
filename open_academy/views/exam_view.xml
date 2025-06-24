@@ -1,0 +1,32 @@
+<odoo>
+    <record id="exam_form_view" model="ir.ui.view">
+        <field name="name">Exams form view</field>
+        <field name="model">openacademy.exam</field>
+        <field name="arch" type="xml">
+            <form>
+               <sheet>
+                   <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="grade"/>
+                   </group>
+               </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="exam_list_view" model="ir.ui.view">
+        <field name="name">Exams list view</field>
+        <field name="model">openacademy.exam</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="grade"/>
+            </list>
+        </field>
+    </record>
+    <record id="exam_action" model="ir.actions.act_window">
+        <field name="name">Exams</field>
+        <field name="res_model">openacademy.exam</field>
+    </record>
+</odoo>

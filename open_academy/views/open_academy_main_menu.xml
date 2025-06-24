@@ -3,4 +3,5 @@
     <menuitem id="student_menu" name="Students" parent="open_academy_main_menu" action="student_action"/>
     <menuitem id="instructor_menu" name="Instructors" parent="open_academy_main_menu" action="instructor_action"/>
     <menuitem id="course_menu" name="Courses" parent="open_academy_main_menu" action="course_action"/>
+    <menuitem id="exam_menu" name="Exams" parent="open_academy_main_menu" action="exam_action"/>
 </odoo>
