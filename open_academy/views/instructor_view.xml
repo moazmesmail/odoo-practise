@@ -13,6 +13,7 @@
                         <field name="birth_date"/>
                         <field name="age"/>
                         <field name="spicalization"/>
+                        <field name="course_ids" string="Courses" widget="many2many_tags"/>
                    </group>
                 </sheet>
             </form>
@@ -22,7 +23,7 @@
         <field name="name">instructor list view</field>
         <field name="model">openacademy.instructor</field>
         <field name="arch" type="xml">
-            <list>
+            <list editable="bottom">
                 <field name="name"/>
                 <field name="email"/>
                 <field name="phone"/>
@@ -31,6 +32,8 @@
                 <field name="birth_date"/>
                 <field name="age"/>
                 <field name="spicalization"/>
+                <field name="course_ids" string="Courses" widget="many2many_tags"/>
+
             </list>
         </field>
     </record>

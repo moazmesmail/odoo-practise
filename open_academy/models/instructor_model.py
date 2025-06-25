@@ -14,7 +14,7 @@ class Instructor(models.Model):
         ('physics', 'Physics'),
         ('chemistry', 'Chemistry'),
     ], default="programming")
-
+    course_ids=fields.One2many('openacademy.course','instructor_id')
     # unique name
     _sql_constraints = [
         ('unique_name', 'unique(name)', 'Instructor name must be unique')
