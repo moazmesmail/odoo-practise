@@ -10,6 +10,8 @@
                 <field name="age"/>
                 <field name="phone"/>
                 <field name="level"/>
+                <field name="course_ids" readonly="1" />
+                <field name="exam_ids" readonly="1"/>
             </list>
         </field>
     </record>
@@ -28,6 +30,14 @@
                         <field name="age"/>
                         <field name="phone"/>
                         <field name="level"/>
+                   </group>
+                   <group string="courses">
+                       <field name="course_ids" readonly="1" />
+
+                   </group>
+                   <group string="exams">
+                       <field name="exam_ids" readonly="1" />
+
                    </group>
                 </sheet>
             </form>

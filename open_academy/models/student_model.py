@@ -15,7 +15,9 @@ class Student(models.Model):
         ('secondary','Secondary'),
         ('high_school','High school'),
     ],default="primary")
+    course_ids=fields.Many2many('openacademy.course')
 
+    exam_ids=fields.One2many('openacademy.exam.submission','student_id')
     #unique name
     _sql_constraints = [
         ('unique_name','unique(name)','Student name must be unique')

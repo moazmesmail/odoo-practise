@@ -9,6 +9,8 @@
                         <field name="name"/>
                         <field name="description"/>
                         <field name="instructor_id"/>
+                        <field name="student_ids" widget="many2many_tags" string="Students"/>
+                        <field name="exam_ids" widget="many2many_tags" string="Exams"/>
                     </group>
                 </sheet>
             </form>
@@ -19,10 +21,12 @@
         <field name="name">Course</field>
         <field name="model">openacademy.course</field>
         <field name="arch" type="xml">
-            <list editable="bottom">
+            <list >
                 <field name="name"/>
                 <field name="description"/>
                 <field name="instructor_id"/>
+                <field name="student_ids" widget="many2many_tags" string="Students"/>
+                <field name="exam_ids" widget="many2many_tags" string="Exams"/>
             </list>
         </field>
     </record>

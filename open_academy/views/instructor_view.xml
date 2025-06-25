@@ -23,11 +23,10 @@
         <field name="name">instructor list view</field>
         <field name="model">openacademy.instructor</field>
         <field name="arch" type="xml">
-            <list editable="bottom">
+            <list >
                 <field name="name"/>
                 <field name="email"/>
                 <field name="phone"/>
-                <field name="name"/>
                 <field name="bio"/>
                 <field name="birth_date"/>
                 <field name="age"/>

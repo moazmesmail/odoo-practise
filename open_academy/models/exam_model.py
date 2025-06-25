@@ -5,10 +5,8 @@ class Exam(models.Model):
 
     name=fields.Char(required=True,default="Exam 1")
     date=fields.Datetime()
-    # digits = ('0', '2')
-    grade=fields.Float()
-
+    course_id=fields.Many2one('openacademy.course')
     # unique name
     _sql_constraints = [
-        ('unique_name', 'unique(name)', 'Instructor name must be unique')
+        ('unique_name', 'unique(name)', 'Exam name must be unique')
     ]
