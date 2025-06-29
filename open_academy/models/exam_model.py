@@ -11,6 +11,7 @@ class Exam(models.Model):
         ('draft','Draft'),
         ('pending','Pending'),
         ('submitted','Submitted'),
+        ('closed','Closed'),
     ])
 
     # unique name
@@ -27,3 +28,6 @@ class Exam(models.Model):
     def action_submitted(self):
         for r in self:
             r.state='submitted'
+    def action_closed(self):
+        for r in self:
+            r.state='closed'

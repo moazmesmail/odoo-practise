@@ -118,6 +118,19 @@
         <field name="res_model">openacademy.exam.submission</field>
     </record>
 
+
+
+<!-- server action closed-->
+    <record id="exam_server_action_closed" model="ir.actions.server">
+        <field name="name">Close</field>
+        <field name="model_id" ref="model_openacademy_exam"/>
+        <field name="binding_model_id" ref="model_openacademy_exam"/>
+        <field name="state">code</field>
+        <field name="code">
+            action=records.action_closed()
+        </field>
+
+    </record>
 <!--    exam menu-->
     <menuitem id="exam_menu" name="Exams" parent="exam_main_menu" action="exam_action"/>
 <!--    exam submission menu-->
