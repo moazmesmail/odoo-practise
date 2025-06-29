@@ -1,0 +1,53 @@
+
+<odoo>
+<!--exam grades list view -->
+    <record id="exam_grades_list_view" model="ir.ui.view">
+        <field name="name" >Exam grades list view</field>
+        <field name="model">openacademy.exam.submission</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="(late)">
+                <field name="student_id" />
+                <field name="course_id" string="Course" />
+                <field name="exam_id" />
+                <field name="submission_time" />
+                <field name="grader" />
+                <field name="grade" />
+            </list> 
+        </field>
+    </record>
+<!--exam grades form view -->
+    <record id="exam_grades_form_view" model="ir.ui.view">
+        <field name="name" >Exam grades form view</field>
+        <field name="model">openacademy.exam.submission</field>
+        <field name="arch" type="xml">
+            <form >
+                <sheet>
+                    <group>
+                        <field name="student_id"  readonly="1" />
+                        <field name="course_id" string="Course"  readonly="1"/>
+                        <field name="exam_id"  readonly="1"/>
+                        <field name="submission_time"  readonly="1"/>
+                        <field name="grader" />
+                        <field name="grade" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="check_submission_date_cron" model="ir.cron">
+        <field name="name"> Exam submission check submission date</field>
+        <field name="model_id" ref="model_openacademy_exam_submission" />
+        <field name="state" >code</field>
+        <field name="code"> model._check_submission_date()</field>
+        <field name="active">1</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+    </record>
+
+<!--    exam  grades action-->
+    <record id="exam_grades_action" model="ir.actions.act_window">
+        <field name="name">Exams Grades</field>
+        <field name="res_model">openacademy.exam.submission</field>
+    </record>
+</odoo>

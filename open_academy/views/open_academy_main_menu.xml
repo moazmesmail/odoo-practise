@@ -3,5 +3,8 @@
     <menuitem id="student_menu" name="Students" parent="open_academy_main_menu" action="student_action"/>
     <menuitem id="instructor_menu" name="Instructors" parent="open_academy_main_menu" action="instructor_action"/>
     <menuitem id="course_menu" name="Courses" parent="open_academy_main_menu" action="course_action"/>
-    <menuitem id="exam_main_menu" name="Exams" parent="open_academy_main_menu" />
+    <menuitem id="exam_menu" name="Exams" parent="open_academy_main_menu" action="exam_action"/>
+    <menuitem id="exam_submission_menu" name="Submissions" parent="open_academy_main_menu" action="exam_submission_action" />
+    <menuitem id="exam_grades_menu" name="Grades" parent="open_academy_main_menu" action="exam_grades_action"/>
+
 </odoo>

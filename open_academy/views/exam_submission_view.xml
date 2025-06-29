@@ -1,0 +1,37 @@
+<odoo>
+<!--    exam  submission form view-->
+    <record id="exam_submission_form_view" model="ir.ui.view">
+        <field name="name">Exams Submissions form View</field>
+        <field name="model">openacademy.exam.submission</field>
+        <field name="arch" type="xml">
+            <form >
+               <sheet>
+                   <group>
+                        <field name="student_id"/>
+                        <field name="exam_id"/>
+                   </group>
+               </sheet>
+            </form>
+        </field>
+    </record>
+
+<!--    exam  submission list view-->
+    <record id="exam_submission_list_view" model="ir.ui.view">
+        <field name="name">Exams Submissions List View</field>
+        <field name="model">openacademy.exam.submission</field>
+        <field name="arch" type="xml">
+            <list create="true">
+                <field name="student_id"/>
+                <field name="exam_id"/>
+                <field name="submission_time"/>
+            </list>
+        </field>
+    </record>
+
+<!--    exam  submission action-->
+    <record id="exam_submission_action" model="ir.actions.act_window">
+        <field name="name">Exams Submissions</field>
+        <field name="res_model">openacademy.exam.submission</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

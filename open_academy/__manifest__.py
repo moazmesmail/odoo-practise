@@ -5,6 +5,8 @@
 
 
 
+
+
 {
     'name': "open_academy",
 
@@ -24,11 +26,13 @@
         'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'views/templates.xml',
-        'views/open_academy_main_menu.xml',
         'views/course_view.xml',
         'views/student_view.xml',
         'views/instructor_view.xml',
         'views/exam_view.xml',
+        'views/exam_grades_view.xml',
+        'views/exam_submission_view.xml',
+        'views/open_academy_main_menu.xml',
 
     ],
     # # only loaded in demonstration mode
@@ -37,4 +41,3 @@
     # ],
     "application":True
 }
-
