@@ -6,10 +6,17 @@
         <field name="arch" type="xml">
             <form>
                <sheet>
+                   <header>
+                        <field name="state" widget="statusbar"  />
+                        <button name="action_draft" type="object" class="btn-primary" string="Set to Draft" invisible="state in ['draft','submitted']"/>
+                        <button name="action_pending" type="object" class="btn-warning" string="Set to pending" invisible="state in ['pending']"/>
+                        <button name="action_submitted" type="object" class="btn-success" string="Submit" invisible="state in ['draft','submitted']"/>
+                   </header>
                    <group>
                         <field name="name"/>
                         <field name="date"/>
                         <field name="course_id"/>
+
                    </group>
                </sheet>
             </form>
@@ -24,6 +31,7 @@
                 <field name="name"/>
                 <field name="date"/>
                 <field name="course_id"/>
+                <field name="state"/>
             </list>
         </field>
     </record>
@@ -67,6 +75,7 @@
         <field name="name">Exams Submissions</field>
         <field name="res_model">openacademy.exam.submission</field>
         <field name="view_mode">list,form</field>
+        <field name="view_id" ref="exam_submission_list_view"/>
     </record>
 
 <!--exam grades list view -->
@@ -112,8 +121,8 @@
 <!--    exam menu-->
     <menuitem id="exam_menu" name="Exams" parent="exam_main_menu" action="exam_action"/>
 <!--    exam submission menu-->
-    <menuitem id="exam_submission_menu" name="Submissions" parent="exam_main_menu" action="exam_submission_action"/>
+<!--    <menuitem id="exam_submission_menu" name="Submissions" parent="exam_main_menu" action="exam_submission_action"/>-->
 <!--    exam grades menu-->
-    <menuitem id="exam_grades_menu" name="Grades" parent="exam_main_menu" action="exam_grades_action"/>
+<!--    <menuitem id="exam_grades_menu" name="Grades" parent="exam_main_menu" action="exam_grades_action"/>-->
 
 </odoo>
