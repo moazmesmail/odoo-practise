@@ -30,6 +30,7 @@
                         <field name="age"/>
                         <field name="phone"/>
                         <field name="level"/>
+
                    </group>
                    <group string="courses">
                        <field name="course_ids" readonly="1" />
@@ -40,6 +41,14 @@
 
                    </group>
                 </sheet>
+                <chatter/>
+
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                </div>-->
+
             </form>
         </field>
     </record>

@@ -3,8 +3,10 @@ from datetime import date
 
 class Student(models.Model):
     _name="openacademy.student"
+    _inherit = ['mail.thread','mail.activity.mixin']
+    _description = "Student"
 
-    name=fields.Char(required=True , default="Omar")
+    name=fields.Char(required=True , default="Omar",tracking=1)
     birth_date=fields.Date()
     email=fields.Char(default="email@company.com")
     phone=fields.Char()
