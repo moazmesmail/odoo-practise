@@ -12,7 +12,7 @@
                 <field name="submission_time" />
                 <field name="grader" />
                 <field name="grade" />
-            </list> 
+            </list>
         </field>
     </record>
 <!--exam grades form view -->

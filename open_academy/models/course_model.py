@@ -11,3 +11,12 @@ class Course(models.Model):
     _sql_constraints = [
         ('unique_name', 'unique(name)', 'Course name must be unique')
     ]
+
+    def create_exam(self):
+        env=self.env
+        name=self.name
+        id=self.id
+        env['openacademy.exam'].create([{
+            "name": f"{name} Exam",
+            'course_id':id,
+        }])

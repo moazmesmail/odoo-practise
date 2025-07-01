@@ -5,6 +5,7 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <button name="create_exam" type="object" string="Create Exam" class="btn-success"/>
                     <group>
                         <field name="name"/>
                         <field name="description"/>
