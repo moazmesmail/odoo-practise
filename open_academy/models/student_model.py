@@ -35,3 +35,28 @@ class Student(models.Model):
                 rec.age=(date.today() - rec.birth_date).days / 365
             else:
                 rec.age=0
+
+    def action_open_enroll_student_wizard(self):
+        env=self.env
+
+        # method one not working
+        # action=env['ir.actions.actions'].__for_xml_id('openacademy.enroll.student.wizard.action_enroll_student_wizard')
+        # act = env.ref('openacademy.enroll.student.wizard.action_enroll_student_wizard')
+        # # act['context']={
+        # #     'default_student_id':self.id
+        # # }
+
+        # method two not working
+        # action=env.ref('openacademy.action_enroll_student_wizard')
+        # print(action)
+        # return action
+
+        # method 3 works
+        return {'type': 'ir.actions.act_window',
+                'name': ('enroll Student in course'),
+                'res_model': 'openacademy.enroll.student.wizard',
+                'target': 'new',
+                'view_mode': 'form',
+                'view_type': 'form',
+                'context': {'default_student_id': self.id}, }
+

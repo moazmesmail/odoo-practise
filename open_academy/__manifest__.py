@@ -4,9 +4,6 @@
 
 
 
-
-
-
 {
     'name': "open_academy",
 
@@ -26,6 +23,7 @@
         'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'views/templates.xml',
+        'wizard/enroll_student_wizard_view.xml',
         'views/course_view.xml',
         'views/student_view.xml',
         'views/instructor_view.xml',
