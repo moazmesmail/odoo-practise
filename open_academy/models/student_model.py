@@ -41,10 +41,12 @@ class Student(models.Model):
 
         # method one not working
         # action=env['ir.actions.actions'].__for_xml_id('openacademy.enroll.student.wizard.action_enroll_student_wizard')
-        # act = env.ref('openacademy.enroll.student.wizard.action_enroll_student_wizard')
-        # # act['context']={
-        # #     'default_student_id':self.id
-        # # }
+        # # act = env.ref('openacademy.enroll.student.wizard.action_enroll_student_wizard')
+        # action['context']={
+        #     'default_student_id':self.id
+        # }
+        #
+        # return action
 
         # method two not working
         # action=env.ref('openacademy.action_enroll_student_wizard')

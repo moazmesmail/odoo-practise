@@ -10,8 +10,8 @@
                 <field name="age"/>
                 <field name="phone"/>
                 <field name="level"/>
-                <field name="course_ids" readonly="1" />
-                <field name="exam_ids" readonly="1"/>
+                <field name="course_ids" widget="many2many_tags" readonly="1" />
+                <field name="exam_ids" widget="many2many_tags" readonly="1"/>
             </list>
         </field>
     </record>

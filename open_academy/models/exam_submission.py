@@ -19,6 +19,14 @@ class ExamSubmission(models.Model):
         ('unique_student_exam', 'unique(student_id, exam_id)', "you can't submit exam twice.")
     ]
 
+    @api.depends('course_id')
+    def _compute_display_name(self):
+        for r in self:
+            name = ""
+            if r.course_id:
+                name = f'{r.course_id} Exam'
+            r.display_name = name
+
     @api.model_create_multi
     def create(self,vals):
         for v in vals:
